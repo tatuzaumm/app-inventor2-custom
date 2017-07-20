@@ -61,6 +61,12 @@ public class PropertyTypeConstants {
    * com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidColorChoicePropertyEditor}.
    */
   public static final String PROPERTY_TYPE_COLOR = "color";
+  
+  /**
+   * Any of the colors specified in {@link
+   * com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidColorGradientChoicePropertyEditor
+   */
+  public static final String PROPERTY_TYPE_COLOR_GRADIENT = "color_gradient";
 
   /**
    * Component instances in the current project.

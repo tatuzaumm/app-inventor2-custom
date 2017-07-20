@@ -820,4 +820,9 @@ public final class YaFormEditor extends SimpleEditor implements FormChangeListen
       cdbChangeListener.onResetDatabase();
     }
   }
+  
+  public void reloadDesigner(){
+		OdeLog.log("Reload designer....");
+		loadDesigner();
+	  }
 }

@@ -17,6 +17,7 @@ import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroid
 import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidBooleanPropertyEditor;
 import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidButtonShapeChoicePropertyEditor;
 import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidColorChoicePropertyEditor;
+import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidColorGradientChoicePropertyEditor;
 import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidComponentSelectorPropertyEditor;
 import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidDefaultURLPropertyEditor;
 import com.google.appinventor.client.editor.youngandroid.properties.YoungAndroidFontTypefaceChoicePropertyEditor;
@@ -184,6 +185,8 @@ public class PropertiesUtil {
       return new YoungAndroidButtonShapeChoicePropertyEditor();
     } else if (editorType.equals(PropertyTypeConstants.PROPERTY_TYPE_COLOR)) {
       return new YoungAndroidColorChoicePropertyEditor();
+    } else if(editorType.equals(PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT)) {
+    	return new YoungAndroidColorGradientChoicePropertyEditor(editor); 
     } else if (editorType.equals(PropertyTypeConstants.PROPERTY_TYPE_COMPONENT)) {
       return new YoungAndroidComponentSelectorPropertyEditor(editor);
     } else if (editorType.equals(PropertyTypeConstants.PROPERTY_TYPE_FLOAT)) {

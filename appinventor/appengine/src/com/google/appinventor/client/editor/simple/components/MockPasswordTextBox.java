@@ -153,7 +153,11 @@ public final class MockPasswordTextBox extends MockWrapper {
       setTextAlignmentProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR)) {
       setBackgroundColorProperty(newValue);
-    } else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
+    } 
+    else if(propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)){
+    	setBackgroundColorProperty(newValue);
+    } 
+    else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
       setEnabledProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_FONTBOLD)) {
       setFontBoldProperty(newValue);
@@ -171,6 +175,9 @@ public final class MockPasswordTextBox extends MockWrapper {
       setHintProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
       setTextColorProperty(newValue);
+    }
+    else if(propertyName.equals(PROPERTY_NAME_TEXTCOLOR_GRADIENT)){
+    	setTextColorProperty(newValue);
     }
   }
 }

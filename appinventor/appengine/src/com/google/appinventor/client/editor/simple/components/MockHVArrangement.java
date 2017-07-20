@@ -138,7 +138,12 @@ public class MockHVArrangement extends MockContainer {
       refreshForm();
     } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR)) {
       setBackgroundColorProperty(newValue);
-    } else {
+    } 
+    else if(propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)){
+    	setBackgroundColorProperty(newValue);
+    }
+    
+    else {
       if (propertyName.equals(PROPERTY_NAME_WIDTH) || propertyName.equals(PROPERTY_NAME_HEIGHT)) {
         refreshForm();
       }

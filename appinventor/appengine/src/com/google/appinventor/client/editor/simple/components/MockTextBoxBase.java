@@ -162,7 +162,7 @@ abstract class MockTextBoxBase extends MockWrapper {
     // Apply changed properties to the mock component
     if (propertyName.equals(PROPERTY_NAME_TEXTALIGNMENT)) {
       setTextAlignmentProperty(newValue);
-    } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR)) {
+    } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR) || propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)) {
       setBackgroundColorProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
       setEnabledProperty(newValue);
@@ -183,7 +183,7 @@ abstract class MockTextBoxBase extends MockWrapper {
     } else if (propertyName.equals(PROPERTY_NAME_TEXT)) {
       setTextProperty(newValue);
       refreshForm();
-    } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
+    } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR) || propertyName.equals(PROPERTY_NAME_TEXTCOLOR_GRADIENT)) {
       setTextColorProperty(newValue);
     }
   }

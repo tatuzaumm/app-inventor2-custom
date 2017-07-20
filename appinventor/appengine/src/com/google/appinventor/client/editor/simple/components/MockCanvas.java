@@ -194,5 +194,8 @@ public final class MockCanvas extends MockContainer {
       setBackgroundImageProperty(newValue);
       refreshForm();
     }
+    else if(propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)){
+    	setBackgroundColorProperty(newValue);
+    }
   }
 }

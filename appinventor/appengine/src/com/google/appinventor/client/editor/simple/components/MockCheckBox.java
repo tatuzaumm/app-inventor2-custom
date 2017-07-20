@@ -162,7 +162,11 @@ public final class MockCheckBox extends MockWrapper {
     // Apply changed properties to the mock component
     if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR)) {
       setBackgroundColorProperty(newValue);
-    } else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
+    } 
+    else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)) {
+		setBackgroundColorProperty(newValue);
+	} 
+    else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
       setEnabledProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_FONTBOLD)) {
       setFontBoldProperty(newValue);
@@ -181,7 +185,11 @@ public final class MockCheckBox extends MockWrapper {
       refreshForm();
     } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
       setTextColorProperty(newValue);
-    } else if (propertyName.equals(PROPERTY_NAME_CHECKED)) {
+    } 
+    else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR_GRADIENT)) {
+		setTextColorProperty(newValue);
+	} 
+    else if (propertyName.equals(PROPERTY_NAME_CHECKED)) {
       setCheckedProperty(newValue);
     }
   }

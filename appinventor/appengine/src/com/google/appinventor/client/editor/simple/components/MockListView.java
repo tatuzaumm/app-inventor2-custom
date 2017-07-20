@@ -166,7 +166,16 @@ public final class MockListView extends MockVisibleComponent {
         setElementsFromStringProperty(currentElements);
       }
       refreshForm();
-    } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
+    } 
+    else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)) {
+		setBackgroundColorProperty(newValue);
+		if (currentList != null) {
+			setElementsFromStringProperty(currentElements);
+		}
+		refreshForm();
+	}
+    
+    else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
       textColor = newValue;
       if (currentList != null) {
         setElementsFromStringProperty(currentElements);

@@ -66,9 +66,9 @@ public class Slider extends AndroidViewComponent implements SeekBar.OnSeekBarCha
   private int leftColor;
 
   private final static int initialRightColor = Component.COLOR_GRAY;
-  private final static String initialRightColorString = Component.DEFAULT_VALUE_COLOR_GRAY;
+  private final static String initialRightColorString = Component.DEFAULT_VALUE_COLOR_DEFAULT;
   private final static int initialLeftColor = Component.COLOR_ORANGE;
-  private final static String initialLeftColorString = Component.DEFAULT_VALUE_COLOR_ORANGE;
+  private final static String initialLeftColorString = Component.DEFAULT_VALUE_COLOR_DEFAULT;
 
   // seekbar.getThumb was introduced in API level 16 and the component warns the user
   // that apps using Sliders won't work if the API level is below 16.  But for very old systems the
@@ -323,6 +323,22 @@ public class Slider extends AndroidViewComponent implements SeekBar.OnSeekBarCha
   }
 
   /**
+   * Specifies the color of the slider bar to the left of the thumb as an alpha-red-green-blue
+   * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
+   * indicates fully transparent and {@code FF} means opaque.
+   *
+   * @param argb background color in the format 0xAARRGGBB, which
+   * includes alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = initialLeftColorString)
+  @SimpleProperty
+  public void ColorLeftGradient(int argb) {
+    leftColor = argb;
+    setSliderColors();
+  }
+  
+  /**
    * Returns the color of the slider bar to the right of the thumb, as an alpha-red-green-blue
    * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
    * indicates fully transparent and {@code FF} means opaque.
@@ -353,6 +369,23 @@ public class Slider extends AndroidViewComponent implements SeekBar.OnSeekBarCha
     setSliderColors();
   }
 
+  /**
+   * Specifies the color of the slider bar to the right of the thumb as an alpha-red-green-blue
+   * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
+   * indicates fully transparent and {@code FF} means opaque.
+   *
+   * @param argb background color in the format 0xAARRGGBB, which
+   * includes alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = initialRightColorString)
+  @SimpleProperty
+  public void ColorRightGradient(int argb) {
+    rightColor = argb;
+    setSliderColors();
+  }
+  
+  
   @Override
   public View getView() {
     return seekbar;

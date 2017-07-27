@@ -953,6 +953,40 @@ public final class Canvas extends AndroidViewComponent implements ComponentConta
     view.setBackgroundColor(argb);
   }
 
+
+  /**
+   * Specifies the Canvas's background color as an alpha-red-green-blue
+   * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
+   * indicates fully transparent and {@code FF} means opaque.
+   * The background color only shows if there is no background image.
+   *
+   * @param argb background color in the format 0xAARRGGBB, which
+   * includes alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void BackgroundColorGradient(int argb) {
+    view.setBackgroundColor(argb);
+  }
+  
+  
+  /**
+   * Specifies the paint color as an alpha-red-green-blue integer,
+   * i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00} indicates fully
+   * transparent and {@code FF} means opaque.
+   *
+   * @param argb paint color in the format 0xAARRGGBB, which includes
+   * alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void PaintColorGradient(int argb) {
+    paintColor = argb;
+    changePaint(paint, argb);
+  }
+  
   /**
    * Returns the path of the canvas background image.
    *

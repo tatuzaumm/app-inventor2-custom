@@ -158,4 +158,24 @@ public final class Ball extends Sprite {
     }
     registerChange();
   }
+
+  /**
+   * PaintColor property setter method.
+   *
+   * @param argb  paint RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void PaintColorGradient(int argb) {
+    paintColor = argb;
+    if (argb != Component.COLOR_DEFAULT) {
+      PaintUtil.changePaint(paint, argb);
+    } else {
+      // The default paint color is black.
+      PaintUtil.changePaint(paint, Component.COLOR_BLACK);
+    }
+    registerChange();
+  }
 }
+

@@ -295,7 +295,10 @@ abstract class MockButtonBase extends MockVisibleComponent {
       setTextAlignmentProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR)) {
       setBackgroundColorProperty(newValue);
-    } else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
+    } else if(propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)){
+    	setBackgroundColorProperty(newValue);
+    }
+    else if (propertyName.equals(PROPERTY_NAME_ENABLED)) {
       setEnabledProperty(newValue);
     } else if (propertyName.equals(PROPERTY_NAME_FONTBOLD)) {
       setFontBoldProperty(newValue);
@@ -317,7 +320,11 @@ abstract class MockButtonBase extends MockVisibleComponent {
       refreshForm();
     } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
       setTextColorProperty(newValue);
-    } else if (propertyName.equals(PROPERTY_NAME_BUTTONSHAPE)){
+    } 
+    else if(propertyName.equals(PROPERTY_NAME_TEXTCOLOR_GRADIENT)){
+    	setTextColorProperty(newValue);
+    }
+    else if (propertyName.equals(PROPERTY_NAME_BUTTONSHAPE)){
       setShapeProperty(newValue);
     }
   }

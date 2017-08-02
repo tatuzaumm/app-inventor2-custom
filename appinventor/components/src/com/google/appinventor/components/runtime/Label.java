@@ -186,6 +186,24 @@ public final class Label extends AndroidViewComponent {
       TextViewUtil.setBackgroundColor(view, Component.COLOR_NONE);
     }
   }
+  
+  /**
+	 * Specifies the label's background color as an alpha-red-green-blue
+	 * integer.
+	 *
+	 * @param argb
+	 *            background RGB color with alpha
+	 */
+	@DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT, defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+	@SimpleProperty
+	public void BackgroundColorGradient(int argb) {
+		backgroundColor = argb;
+		if (argb != Component.COLOR_DEFAULT) {
+			TextViewUtil.setBackgroundColor(view, argb);
+		} else {
+			TextViewUtil.setBackgroundColor(view, Component.COLOR_NONE);
+		}
+	}
 
   /**
    * Returns true if the label's text should be bold.
@@ -431,4 +449,21 @@ private void setLabelMargins(boolean hasMargins) {
       TextViewUtil.setTextColor(view, Component.COLOR_BLACK);
     }
   }
+  
+	/**
+	 * Specifies the label's text color as an alpha-red-green-blue integer.
+	 *
+	 * @param argb
+	 *            text RGB color with alpha
+	 */
+	@DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT, defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+	@SimpleProperty
+	public void TextColorGradient(int argb) {
+		textColor = argb;
+		if (argb != Component.COLOR_DEFAULT) {
+			TextViewUtil.setTextColor(view, argb);
+		} else {
+			TextViewUtil.setTextColor(view, Component.COLOR_BLACK);
+		}
+	}
 }

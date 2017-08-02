@@ -7,6 +7,8 @@
 package com.google.appinventor.client;
 
 import com.google.gwt.i18n.client.Messages;
+import com.google.gwt.i18n.client.LocalizableResource.Description;
+import com.google.gwt.i18n.client.Messages.DefaultMessage;
 
 /**
  * I18n strings for {@link Ode}.
@@ -1205,6 +1207,351 @@ public interface OdeMessages extends Messages {
   @Description("Text for color choice 'Yellow'")
   String yellowColor();
 
+//MATERIAL DESIGN CUSTOM COLOURS
+	// Used in
+	// editor/youngandroid/properties/YoungAndroidColorChoicePropertyEditor.java
+	@DefaultMessage("Indigo")
+	@Description("Material Design Indigo 1")
+	String mdIndigoColor();
+
+	@DefaultMessage("Blue")
+	@Description("Material Design Blue 1")
+	String mdBlueColor();
+
+	@DefaultMessage("Light Blue")
+	@Description("Material Design Light Blue 1")
+	String mdLightBlueColor();
+
+	@DefaultMessage("Cyan")
+	@Description("Material Design Cyan 1")
+	String mdCyanColor();
+
+	@DefaultMessage("Teal")
+	@Description("Material Design Teal 1")
+	String mdTealColor();
+
+	@DefaultMessage("Green")
+	@Description("Material Design Green 1")
+	String mdGreenColor();
+
+	@DefaultMessage("Light Green")
+	@Description("Material Design Light Green 1")
+	String mdLighGreenColor();
+
+	@DefaultMessage("Lime")
+	@Description("Material Design Lime 1")
+	String mdLimeColor();
+
+	@DefaultMessage("Yellow")
+	@Description("Material Design Yellow")
+	String mdYellowColor();
+
+	@DefaultMessage("Amber")
+	@Description("Material Design Amber")
+	String mdAmberColor();
+
+	@DefaultMessage("Orange")
+	@Description("Material Design Orange")
+	String mdOrangeColor();
+
+	@DefaultMessage("Deep Orange")
+	@Description("Material Design Deep Orange")
+	String mdDeepOrangeColor();
+
+	@DefaultMessage("Red")
+	@Description("Material Design Red")
+	String mdRedColor();
+
+	@DefaultMessage("Pink")
+	@Description("Material Design Pink")
+	String mdPinkColor();
+
+	@DefaultMessage("Purple")
+	@Description("Material Design Purple")
+	String mdPurpleColor();
+
+	@DefaultMessage("Deep Purple")
+	@Description("Material Design Deep Purple")
+	String mdDeepPurpleColor();
+
+	@DefaultMessage("Blue Grey")
+	@Description("Material Design Blue Grey")
+	String mdBlueGreyColor();
+
+	@DefaultMessage("Brown")
+	@Description("Material Design Brown")
+	String mdBrownColor();
+
+	@DefaultMessage("Grey")
+	@Description("Material Design Grey")
+	String mdGreyColor();
+
+	@DefaultMessage("White")
+	@Description("Material Design White")
+	String mdWhiteColor();
+
+	@DefaultMessage("Black")
+	@Description("Material Design Black")
+	String mdBlackColor();
+
+	//Gradient Properties
+	@DefaultMessage("BackgroundColorGradient")
+	@Description("")
+	String BackgroundColorGradientProperties();
+	
+	@DefaultMessage("TextColorGradient")
+	@Description("")
+	String TextColorGradientProperties();
+	
+	@DefaultMessage("ItemBackgroundColorGradient")
+	@Description("")
+	String ItemBackgroundColorGradientProperties();
+	
+	@DefaultMessage("ItemTextColorGradient")
+	@Description("")
+	String ItemTextColorGradientProperties();
+	
+	@DefaultMessage("SelectionColorGradient")
+	@Description("")
+	String SelectionColorGradientProperties();
+	
+	@DefaultMessage("ColorLeftGradient")
+	@Description("")
+	String ColorLeftGradientProperties();
+	
+	@DefaultMessage("ColorRightGradient")
+	@Description("")
+	String ColorRightGradientProperties();
+
+	@DefaultMessage("PaintColorGradient")
+	@Description("")
+	String PaintColorGradientProperties();
+	
+	// Used in
+	// editor/youngandroid/properties/YoungAndroidColorGradientChoicePropertyEditor.java
+	
+	@DefaultMessage("100")
+	@Description("Indigo 1")
+	String mdIndigo1Color();
+	
+	@DefaultMessage("700")
+	@Description("Indigo 2")
+	String mdIndigo2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Indigo 3")
+	String mdIndigo3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Blue 1")
+	String mdBlue1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Blue 2")
+	String mdBlue2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Blue 3")
+	String mdBlue3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Light Blue 1 ")
+	String mdLightBlue1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Light Blue 2")
+	String mdLightBlue2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Light Blue 3")
+	String mdLightBlue3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Cyan 1")
+	String mdCyan1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Cyan 2")
+	String mdCyan2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Cyan 3")
+	String mdCyan3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Teal 1")
+	String mdTeal1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Teal 2")
+	String mdTeal2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Teal 3")
+	String mdTeal3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Green 1")
+	String mdGreen1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Green 2")
+	String mdGreen2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Green 3")
+	String mdGreen3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Light Green 1")
+	String mdLightGreen1Color() ;
+	
+	@DefaultMessage("700")
+	@Description("Material Design Light Green 2")
+	String mdLightGreen2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Light Green 3")
+	String mdLightGreen3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Lime 1")
+	String mdLime1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Lime 2")
+	String mdLime2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Lime 3")
+	String mdLime3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Yellow 1")
+	String mdYellow1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Yellow 2")
+	String mdYellow2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Yellow 3")
+	String mdYellow3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Amber 1")
+	String mdAmber1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Amber 2")
+	String mdAmber2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Amber 3")
+	String mdAmber3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Orange 1")
+	String mdOrange1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Orange 2")
+	String mdOrange2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Orange 3")
+	String mdOrange3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Deep Orange 1")
+	String mdDeepOrange1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Deep Orange 2")
+	String mdDeepOrange2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Deep Orange 3")
+	String mdDeepOrange3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Red 1")
+	String mdRed1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Red 2")
+	String mdRed2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Red 3")
+	String mdRed3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Pink 1")
+	String mdPink1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Pink 2")
+	String mdPink2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Pink 3")
+	String mdPink3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Purple 1")
+	String mdPurple1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Purple 2")
+	String mdPurple2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Purple 3")
+	String mdPurple3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Deep Purple 1")
+	String mdDeepPurple1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Deep Purple 2")
+	String mdDeepPurple2Color();
+	
+	@DefaultMessage("A200")
+	@Description("Material Design Deep Purple 3")
+	String mdDeepPurple3Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Blue Grey 1")
+	String mdBlueGrey1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Blue Grey 2")
+	String mdBlueGrey2Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design Brown 1")
+	String mdBrown1Color();
+	
+	@DefaultMessage("700")
+	@Description("Material Design Brown 2")
+	String mdBrown2Color();
+	
+	@DefaultMessage("100")
+	@Description("Material Design 1")
+	String mdGrey1Color() ;
+	
+	@DefaultMessage("400")
+	@Description("Material Design 2")
+	String mdGrey2Color();
+	
+	@DefaultMessage("600")
+	@Description("Material Design 3")
+	String mdGrey3Color();
+  
+  
+  
   // Used in editor/youngandroid/properties/YoungAndroidFontTypefaceChoicePropertyEditor.java
 
   @DefaultMessage("default")
@@ -6226,19 +6573,19 @@ public interface OdeMessages extends Messages {
   @Description("")
   String GetRowsWithConditionsMethods();
 
-  @DefaultMessage("简体中文")
+  @DefaultMessage("ç®€ä½“ä¸­æ–‡")
   @Description("")
   String SwitchToSimplifiedChinese();
 
-  @DefaultMessage("繁体中文")
+  @DefaultMessage("ç¹�ä½“ä¸­æ–‡")
   @Description("")
   String SwitchToTraditionalChinese();
 
-  @DefaultMessage("Español")
+  @DefaultMessage("EspaÃ±ol")
   @Description("")
   String SwitchToSpanish();
 
-  @DefaultMessage("Français")
+  @DefaultMessage("FranÃ§ais")
   @Description("")
   String SwitchToFrench();
 
@@ -6246,11 +6593,11 @@ public interface OdeMessages extends Messages {
   @Description("")
   String SwitchToItalian();
 
-  @DefaultMessage("Pусский")
+  @DefaultMessage("PÑƒÑ�Ñ�ÐºÐ¸Ð¹")
   @Description("")
   String SwitchToRussian();
 
-  @DefaultMessage("한국어")
+  @DefaultMessage("í•œêµ­ì–´")
   @Description("")
   String SwitchToKorean();
 
@@ -6258,7 +6605,7 @@ public interface OdeMessages extends Messages {
   @Description("")
   String SwitchToSwedish();
 
-  @DefaultMessage("Português do Brasil")
+  @DefaultMessage("PortuguÃªs do Brasil")
   @Description("")
   String switchToPortugueseBR();
 

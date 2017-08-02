@@ -317,6 +317,25 @@ public class HVArrangement extends AndroidViewComponent implements Component, Co
     }
 
     /**
+     * Specifies the button's background color as an alpha-red-green-blue
+     * integer.  If the parameter is {@link Component#COLOR_DEFAULT}, the
+     * original beveling is restored.  If an Image has been set, the color
+     * change will not be visible until the Image is removed.
+     *
+     * @param argb background RGB color with alpha
+     */
+    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+            defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+    @SimpleProperty(description = "Specifies the component's background color. " +
+            "The background color will not be visible if an Image is being displayed.")
+    public void BackgroundColorGradient(int argb) {
+        backgroundColor = argb;
+//        getView().setBackgroundColor(argb);
+        updateAppearance();
+
+    }
+    
+    /**
      * Returns the path of the button's image.
      *
      * @return  the path of the button's image

@@ -92,8 +92,9 @@
          It is an error for neither to be set. Instead of a login page, visitors
          to the site will receive an error page.
      -->
-
-    <property name="auth.usegoogle" value="true" />
+	<!--
+	
+    <property name="auth.usegoogle" value="true" /> -->
     <property name="auth.uselocal" value="true" />
 
     <!-- Flags associated with localauth code -->

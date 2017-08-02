@@ -356,6 +356,15 @@ public abstract class ButtonBase extends AndroidViewComponent
     backgroundColor = argb;
     updateAppearance();
   }
+  
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+          defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+	@SimpleProperty(description = "Specifies the button's background color gradient " +
+	"The background color will not be visible if an Image is being displayed.")
+	public void BackgroundColorGradient(int argb) {
+	backgroundColor = argb;
+	updateAppearance();
+	}
 
   // Update appearance based on values of backgroundImageDrawable, backgroundColor and shape.
   // Images take precedence over background colors.
@@ -630,6 +639,25 @@ public abstract class ButtonBase extends AndroidViewComponent
       defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
   @SimpleProperty
   public void TextColor(int argb) {
+    // TODO(user): I think there is a way of only setting the color for the enabled state
+    textColor = argb;
+    if (argb != Component.COLOR_DEFAULT) {
+      TextViewUtil.setTextColor(view, argb);
+    } else {
+      TextViewUtil.setTextColors(view, defaultColorStateList);
+    }
+  }
+  
+  /**
+   * Specifies the button's text color as an alpha-red-green-blue
+   * integer.
+   *
+   * @param argb  text RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void TextColorGradient(int argb) {
     // TODO(user): I think there is a way of only setting the color for the enabled state
     textColor = argb;
     if (argb != Component.COLOR_DEFAULT) {

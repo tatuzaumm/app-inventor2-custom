@@ -160,18 +160,21 @@ public final class MockListView extends MockVisibleComponent {
     } else if (propertyName.equals(PROPERTY_NAME_SHOW_FILTER_BAR)) {
       setFilterShowBox(newValue);
       refreshForm();
-    } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR)) {
+    } else if (propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR) || propertyName.equals(PROPERTY_NAME_BACKGROUNDCOLOR_GRADIENT)) {
       setBackgroundColorProperty(newValue);
       if (currentList != null) {
         setElementsFromStringProperty(currentElements);
       }
       refreshForm();
-    } else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR)) {
+    } 
+    
+    else if (propertyName.equals(PROPERTY_NAME_TEXTCOLOR) || propertyName.equals(PROPERTY_NAME_TEXTCOLOR_GRADIENT)) {
       textColor = newValue;
       if (currentList != null) {
         setElementsFromStringProperty(currentElements);
       }
       refreshForm();
     }
+   
   }
 }

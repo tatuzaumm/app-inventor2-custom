@@ -136,6 +136,24 @@ public final class CheckBox extends AndroidViewComponent
       TextViewUtil.setBackgroundColor(view, Component.COLOR_NONE);
     }
   }
+  
+  /**
+   * Specifies the checkbox's background color as an alpha-red-green-blue
+   * integer.
+   *
+   * @param argb  background RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void BackgroundColorGradient(int argb) {
+    backgroundColor = argb;
+    if (argb != Component.COLOR_DEFAULT) {
+      TextViewUtil.setBackgroundColor(view, argb);
+    } else {
+      TextViewUtil.setBackgroundColor(view, Component.COLOR_NONE);
+    }
+  }
 
   /**
    * Returns true if the checkbox is active and clickable.
@@ -328,6 +346,24 @@ public final class CheckBox extends AndroidViewComponent
     }
   }
 
+  /**
+   * Specifies the checkbox's text color as an alpha-red-green-blue
+   * integer.
+   *
+   * @param argb  text RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void TextColorGradient(int argb) {
+    textColor = argb;
+    if (argb != Component.COLOR_DEFAULT) {
+      TextViewUtil.setTextColor(view, argb);
+    } else {
+      TextViewUtil.setTextColor(view, Component.COLOR_BLACK);
+    }
+  }
+  
   /**
    * Returns true if the checkbox is checked.
    *

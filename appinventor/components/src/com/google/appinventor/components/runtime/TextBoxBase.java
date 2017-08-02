@@ -216,6 +216,24 @@ public abstract class TextBoxBase extends AndroidViewComponent
   }
 
   /**
+   * Specifies the textbox's background color as an alpha-red-green-blue
+   * integer.
+   *
+   * @param argb  background RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void BackgroundColorGradient(int argb) {
+    backgroundColor = argb;
+    if (argb != Component.COLOR_DEFAULT) {
+      TextViewUtil.setBackgroundColor(view, argb);
+    } else {
+      ViewUtil.setBackgroundDrawable(view, defaultTextBoxDrawable);
+    }
+  }
+  
+  /**
    * Returns true if the textbox is active and useable.
    *
    * @return  {@code true} indicates enabled, {@code false} disabled
@@ -450,6 +468,24 @@ public abstract class TextBoxBase extends AndroidViewComponent
     }
   }
 
+  /**
+   * Specifies the textbox's text color as an alpha-red-green-blue
+   * integer.
+   *
+   * @param argb  text RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void TextColorGradient(int argb) {
+    textColor = argb;
+    if (argb != Component.COLOR_DEFAULT) {
+      TextViewUtil.setTextColor(view, argb);
+    } else {
+      TextViewUtil.setTextColor(view, Component.COLOR_BLACK);
+    }
+  }
+  
   /**
    * Request focus to current textbox.
    */

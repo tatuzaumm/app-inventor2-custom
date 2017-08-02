@@ -400,12 +400,24 @@ public final class Notifier extends AndroidNonvisibleComponent implements Compon
    * @param argb  background RGB color with alpha
    */
   @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR,
-      defaultValue = Component.DEFAULT_VALUE_COLOR_DKGRAY)
+      defaultValue = Component.DEFAULT_VALUE_COLOR_BLACK)
   @SimpleProperty(description="Specifies the background color for alerts (not dialogs).")
   public void BackgroundColor(int argb) {
     backgroundColor = argb;
   }
 
+  /**
+   * Specifies the alert's background color.
+   *
+   * @param argb  background RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty(description="Specifies the background color for alerts (not dialogs).")
+  public void BackgroundColorGradient(int argb) {
+    backgroundColor = argb;
+  }
+  
   /**
    * Returns the alert's text color.
    *
@@ -429,6 +441,18 @@ public final class Notifier extends AndroidNonvisibleComponent implements Compon
     textColor = argb;
   }
 
+  /**
+   * Specifies the alert's text color.
+   *
+   * @param argb  text RGB color with alpha
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void TextColorGradient(int argb) {
+    textColor = argb;
+  }
+  
   // show a toast using a TextView, which allows us to set the
   // font size.  The default toast is too small.
   private void toastNow (String message) {

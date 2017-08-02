@@ -408,6 +408,22 @@ public final class ListView extends AndroidViewComponent implements AdapterView.
   }
 
   /**
+   * Specifies the ListView's background color as an alpha-red-green-blue
+   * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
+   * indicates fully transparent and {@code FF} means opaque.
+   *
+   * @param argb background color in the format 0xAARRGGBB, which
+   * includes alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void BackgroundColorGradient(int argb) {
+      backgroundColor = argb;
+      setBackgroundColor(backgroundColor);
+  }
+  
+  /**
    * Returns the listview's selection color as an alpha-red-green-blue
    * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
    * indicates fully transparent and {@code FF} means opaque.
@@ -431,7 +447,7 @@ public final class ListView extends AndroidViewComponent implements AdapterView.
    * includes alpha, red, green, and blue components
    */
   @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR,
-      defaultValue = Component.DEFAULT_VALUE_COLOR_LTGRAY)
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
   @SimpleProperty
   public void SelectionColor(int argb) {
     selectionColor = argb;
@@ -440,6 +456,26 @@ public final class ListView extends AndroidViewComponent implements AdapterView.
     ));
   }
 
+  /**
+   * Specifies the ListView's selection color as an alpha-red-green-blue
+   * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
+   * indicates fully transparent and {@code FF} means opaque.
+   * Is not supported on Icecream Sandwich or earlier
+   *
+   * @param argb selection color in the format 0xAARRGGBB, which
+   * includes alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void SelectionColorGradient(int argb) {
+    selectionColor = argb;
+    view.setSelector(new GradientDrawable(
+      GradientDrawable.Orientation.TOP_BOTTOM, new int[]{argb, argb}
+    ));
+  }
+  
+  
   /**
    * Returns the listview's text item color as an alpha-red-green-blue
    * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
@@ -471,6 +507,22 @@ public final class ListView extends AndroidViewComponent implements AdapterView.
       setAdapterData();
   }
 
+  /**
+   * Specifies the ListView item's text color as an alpha-red-green-blue
+   * integer, i.e., {@code 0xAARRGGBB}.  An alpha of {@code 00}
+   * indicates fully transparent and {@code FF} means opaque.
+   *
+   * @param argb background color in the format 0xAARRGGBB, which
+   * includes alpha, red, green, and blue components
+   */
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+  @SimpleProperty
+  public void TextColorGradient(int argb) {
+      textColor = argb;
+      setAdapterData();
+  }
+  
   /**
    * Returns the listview's text font Size
    *

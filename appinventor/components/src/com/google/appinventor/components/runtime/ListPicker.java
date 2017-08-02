@@ -141,6 +141,19 @@ public class ListPicker extends Picker implements ActivityResultListener, Delete
     return showFilter;
   }
 
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+	      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+	  @SimpleProperty
+	  public void ItemTextColorGradient(int argb) {
+	    this.itemTextColor = argb;
+	  }
+
+	  @SimpleProperty(description = "The text color of the ListPicker items.",
+	      category = PropertyCategory.APPEARANCE)
+	  public int ItemTextColorGradient() {
+	    return this.itemTextColor;
+	  }
+  
   @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR,
       defaultValue = Component.DEFAULT_VALUE_COLOR_WHITE)
   @SimpleProperty
@@ -167,6 +180,19 @@ public class ListPicker extends Picker implements ActivityResultListener, Delete
     return this.itemBackgroundColor;
   }
 
+  @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_COLOR_GRADIENT,
+	      defaultValue = Component.DEFAULT_VALUE_COLOR_DEFAULT)
+	  @SimpleProperty
+	  public void ItemBackgroundColorGradient(int argb) {
+	    this.itemBackgroundColor = argb;
+	  }
+
+	  @SimpleProperty(description = "The background color of the ListPicker items.",
+	      category = PropertyCategory.APPEARANCE)
+	  public int ItemBackgroundColorGradient() {
+	    return this.itemBackgroundColor;
+	  }
+  
   /**
    * Selection index property getter method.
    */

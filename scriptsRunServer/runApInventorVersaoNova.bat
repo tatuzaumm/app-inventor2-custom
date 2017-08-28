@@ -1,0 +1,1 @@
+C:\appengine\appengine-java-sdk-1.9.34\bin\dev_appserver --port=8888 --address=0.0.0.0 C:\workspace\AppInventorVersaoNova\appinventor-sources\appinventor\appengine\build\war
